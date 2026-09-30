@@ -1,7 +1,43 @@
 [
   {
     "certificate_id": "PCIST-DSAI-2026-001",
-    "student_name": "Test Student",
+    "student_name": "Syed sofiullah rashed",
+    "course": "Data Science & Artificial Intelligence Course",
+    "issuer": "Programming Club of IST (PcIST)",
+    "institution": "Institute of Science & Technology (IST)",
+    "issue_date": "2026-09-30",
+    "status": "valid"
+  },
+  {
+    "certificate_id": "PCIST-DSAI-2026-002",
+    "student_name": "Orgina Akter Runa",
+    "course": "Data Science & Artificial Intelligence Course",
+    "issuer": "Programming Club of IST (PcIST)",
+    "institution": "Institute of Science & Technology (IST)",
+    "issue_date": "2026-09-30",
+    "status": "valid"
+  },
+  {
+    "certificate_id": "PCIST-DSAI-2026-003",
+    "student_name": "Nusrat Jahan Anika",
+    "course": "Data Science & Artificial Intelligence Course",
+    "issuer": "Programming Club of IST (PcIST)",
+    "institution": "Institute of Science & Technology (IST)",
+    "issue_date": "2026-09-30",
+    "status": "valid"
+  },
+  {
+    "certificate_id": "PCIST-DSAI-2026-004",
+    "student_name": "Asem Hamid",
+    "course": "Data Science & Artificial Intelligence Course",
+    "issuer": "Programming Club of IST (PcIST)",
+    "institution": "Institute of Science & Technology (IST)",
+    "issue_date": "2026-09-30",
+    "status": "valid"
+  },
+  {
+    "certificate_id": "PCIST-DSAI-2026-005",
+    "student_name": "Fahim Abrar Mahir",
     "course": "Data Science & Artificial Intelligence Course",
     "issuer": "Programming Club of IST (PcIST)",
     "institution": "Institute of Science & Technology (IST)",
