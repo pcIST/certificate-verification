@@ -57,7 +57,7 @@ function formatDate(dateString) {
 }
 
 
-// Show valid certificate
+// Show a certificate that passed ID and token verification
 function showValidCertificate(certificate) {
     resultContainer.style.display = "block";
 
@@ -111,6 +111,39 @@ function showValidCertificate(certificate) {
                     ${escapeHtml(certificate.institution)}
                 </div>
 
+            </div>
+
+        </div>
+    `;
+}
+
+
+// Show a certificate found by ID without QR token verification
+function showRecordFound(certificate) {
+    resultContainer.style.display = "block";
+
+    resultContainer.innerHTML = `
+        <div style="
+            border: 1px solid #efd6a4;
+            border-left: 5px solid #c99324;
+            background: #fffaf0;
+            padding: 22px;
+            border-radius: 8px;
+        ">
+
+            <div style="
+                color: #9a6b0f;
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px;
+            ">
+                Certificate Record Found
+            </div>
+
+            <div style="font-size: 14px; line-height: 1.6;">
+                Certificate ID
+                <strong>${escapeHtml(certificate.certificate_id)}</strong>
+                exists in the PcIST certificate registry. This result is not a secure QR verification.
             </div>
 
         </div>
@@ -211,7 +244,7 @@ function escapeHtml(value) {
 
 
 // Main verification
-function verifyCertificate(id) {
+function verifyCertificate(id, token = null, isQrVerification = false) {
     const normalizedId = normalizeCertificateId(id);
 
     if (!normalizedId) {
@@ -227,13 +260,29 @@ function verifyCertificate(id) {
         return;
     }
 
+    const tokenMatches =
+        isQrVerification &&
+        typeof token === "string" &&
+        typeof certificate.verification_token === "string" &&
+        token === certificate.verification_token;
+
     if (certificate.status?.toLowerCase() === "revoked") {
-        showRevokedCertificate(certificate);
+        if (!isQrVerification || tokenMatches) {
+            showRevokedCertificate(certificate);
+        } else {
+            showRecordFound(certificate);
+        }
+
         return;
     }
 
     if (certificate.status?.toLowerCase() === "valid") {
-        showValidCertificate(certificate);
+        if (tokenMatches) {
+            showValidCertificate(certificate);
+        } else {
+            showRecordFound(certificate);
+        }
+
         return;
     }
 
@@ -256,13 +305,14 @@ async function initializeVerification() {
     await loadCertificates();
 
     // Read Certificate ID from QR URL:
-    // ?id=PCIST-DSAI-2026-001
+    // ?id=PCIST-DSAI-2026-001&token=...
 
     const params = new URLSearchParams(window.location.search);
     const certificateId = params.get("id");
+    const verificationToken = params.get("token");
 
     if (certificateId) {
-        verifyCertificate(certificateId);
+        verifyCertificate(certificateId, verificationToken, true);
     }
 }
 

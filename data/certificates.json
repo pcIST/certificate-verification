@@ -1,7 +1,8 @@
 [
   {
     "certificate_id": "PCIST-DSAI-2026-001",
-    "student_name": "Syed sofiullah rashed",
+    "verification_token": "cBQTFzSnPcMgoRpkc3t0oLKNy_7ez4LQ",
+    "student_name": "Syed Sofiullah Rashed",
     "course": "Data Science & Artificial Intelligence – Foundation Course",
     "issuer": "Programming Club of IST (PcIST)",
     "institution": "Institute of Science & Technology (IST)",
@@ -10,6 +11,7 @@
   },
   {
     "certificate_id": "PCIST-DSAI-2026-002",
+    "verification_token": "znr_4Rqnc4TQJdbvuZpKclzztKooeHtu",
     "student_name": "Orgina Akter Runa",
     "course": "Data Science & Artificial Intelligence – Foundation Course",
     "issuer": "Programming Club of IST (PcIST)",
@@ -19,6 +21,7 @@
   },
   {
     "certificate_id": "PCIST-DSAI-2026-003",
+    "verification_token": "2f5jpzJSAteo8sTuyVdlTxeM_PbjXBuE",
     "student_name": "Nusrat Jahan Anika",
     "course": "Data Science & Artificial Intelligence – Foundation Course",
     "issuer": "Programming Club of IST (PcIST)",
@@ -28,6 +31,7 @@
   },
   {
     "certificate_id": "PCIST-DSAI-2026-004",
+    "verification_token": "GKgv3r8TKu8Q8u7OUkWEDgaEbAL1fhj6",
     "student_name": "Asem Hamid",
     "course": "Data Science & Artificial Intelligence – Foundation Course",
     "issuer": "Programming Club of IST (PcIST)",
@@ -37,6 +41,7 @@
   },
   {
     "certificate_id": "PCIST-DSAI-2026-005",
+    "verification_token": "tqLPSTFAmbPcEBiu9Zjtv9IYV3FPMoh3",
     "student_name": "Fahim Abrar Mahir",
     "course": "Data Science & Artificial Intelligence – Foundation Course",
     "issuer": "Programming Club of IST (PcIST)",
