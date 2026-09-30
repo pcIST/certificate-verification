@@ -1,0 +1,11 @@
+[
+  {
+    "certificate_id": "PCIST-DSAI-2026-001",
+    "student_name": "Test Student",
+    "course": "Data Science & Artificial Intelligence Course",
+    "issuer": "Programming Club of IST (PcIST)",
+    "institution": "Institute of Science & Technology (IST)",
+    "issue_date": "2026-09-30",
+    "status": "valid"
+  }
+]

@@ -1,0 +1,351 @@
+/* =========================================
+   PcIST Certificate Verification Portal
+   ========================================= */
+
+:root {
+    --navy: #0f2a5f;
+    --navy-dark: #091b40;
+    --navy-light: #263f70;
+
+    --gold: #c9a95e;
+    --gold-light: #e5d29a;
+
+    --background: #f5f7fb;
+    --white: #ffffff;
+
+    --text: #17233b;
+    --muted: #69758a;
+    --border: #dce2ec;
+
+    --success: #16834b;
+    --danger: #c43b3b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(
+            circle at top,
+            #ffffff 0%,
+            var(--background) 55%,
+            #edf1f7 100%
+        );
+
+    color: var(--text);
+}
+
+/* Main Page */
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   Header
+   ========================================= */
+
+.site-header {
+    background: var(--navy);
+    border-bottom: 4px solid var(--gold);
+    padding: 22px 24px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.brand h1 {
+    margin: 0;
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    letter-spacing: 0.4px;
+}
+
+.brand p {
+    margin: 7px 0 0;
+    color: var(--gold-light);
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   Verification Area
+   ========================================= */
+
+.verification-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 55px 20px;
+}
+
+.verification-card {
+    width: 100%;
+    max-width: 680px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-top: 5px solid var(--gold);
+
+    border-radius: 12px;
+
+    padding: 42px 45px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 45px rgba(15, 42, 95, 0.08),
+        0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Check Icon */
+
+.verification-icon {
+    width: 66px;
+    height: 66px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+
+    color: var(--navy);
+
+    font-size: 31px;
+    font-weight: bold;
+
+    background: #fffdf7;
+}
+
+.portal-label {
+    margin: 0 0 9px;
+
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.verification-card h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    color: var(--navy);
+
+    font-size: 34px;
+}
+
+.intro-text {
+    margin: 13px auto 31px;
+
+    max-width: 480px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   Verification Form
+   ========================================= */
+
+.verification-form {
+    text-align: left;
+}
+
+.verification-form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+.search-row input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 14px 15px;
+
+    border: 1px solid #cfd6e2;
+    border-radius: 6px;
+
+    background: #fbfcfe;
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.search-row input:focus {
+    border-color: var(--navy);
+
+    box-shadow:
+        0 0 0 3px rgba(15, 42, 95, 0.08);
+}
+
+.search-row button {
+    border: none;
+    border-radius: 6px;
+
+    padding: 14px 22px;
+
+    background: var(--navy);
+
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.1s ease;
+}
+
+.search-row button:hover {
+    background: var(--navy-dark);
+}
+
+.search-row button:active {
+    transform: translateY(1px);
+}
+
+/* =========================================
+   Verification Result
+   JavaScript will populate this later
+   ========================================= */
+
+.verification-result {
+    display: none;
+
+    margin-top: 28px;
+
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+
+.site-footer {
+    padding: 23px 20px;
+
+    background: var(--white);
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 4px 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.site-footer p:first-child {
+    color: var(--navy);
+
+    font-weight: bold;
+}
+
+.site-footer .footer-note {
+    margin-top: 10px;
+
+    color: #929bad;
+
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+}
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 620px) {
+
+    .site-header {
+        padding: 19px 15px;
+    }
+
+    .brand h1 {
+        font-size: 21px;
+    }
+
+    .brand p {
+        font-size: 11px;
+    }
+
+    .verification-section {
+        padding: 35px 15px;
+        align-items: flex-start;
+    }
+
+    .verification-card {
+        padding: 32px 20px;
+    }
+
+    .verification-card h2 {
+        font-size: 28px;
+    }
+
+    .verification-icon {
+        width: 58px;
+        height: 58px;
+
+        font-size: 27px;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-row button {
+        width: 100%;
+    }
+}
